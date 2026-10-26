@@ -19,7 +19,7 @@ V repository *cv05* na GitHub a vo svojom webovom priestore na sigma (`ti/cv05`)
 
 Na miestach `// DOPLŇ` a `[DOPLŇ …]` dopĺňaš sám.
 
-### Ukážka 7: prompt na process.php
+### Ukážka 6: prompt na process.php
 
 ```text
 Mám form v súbore content/register.php (posielam ho nižšie) na tému [DOPLŇ tému].
@@ -49,13 +49,13 @@ Tu je form:
 [VLOŽ content/register.php]
 ```
 
-### Ukážka 8: prompt na výpočty
+### Ukážka 7: prompt na výpočty
 
 ```text
 V súbore process.php (posielam) mám po kontrolách vetvu else, kde sú údaje
 v poriadku. Doplň do nej výpočty z údajov form, PHP 8.1, bez funkcií:
 - z field s dátumom [DOPLŇ name field]: dátum vo formáte d. m. Y, anglický názov dňa
-  cez date('l'), počet dní odo dneška cez strtotime a time() delené 86400 a ceil,
+  cez date('l'), počet dní od toho dátumu do dnes cez time() a strtotime delené 86400 a floor,
 - z field s rokom [DOPLŇ name field]: počet rokov do dnes cez (int) date('Y'),
 - dĺžka textu z field [DOPLŇ name field] cez mb_strlen,
 - jeden ďalší výpočet nechaj ako komentár // DOPLŇ: vlastný výpočet z mojej témy.
@@ -65,7 +65,7 @@ Tu je súbor:
 [VLOŽ process.php]
 ```
 
-### Ukážka 9: prompt na samospracujúci form
+### Ukážka 8: prompt na samospracujúci form
 
 ```text
 Posielam content/register.php (form) a process.php (kontroly) z webu na tému
@@ -116,17 +116,17 @@ Pravý klik na `cv05`, **Upload Folder**. Over na sigma `…/ti/cv05/web/`, že 
 
 **Úloha 6.3: Form na POST.** V `web/content/register.php` over, že všetky fields majú anglické `name` a `value` bez diakritiky (skupina checkboxov má `[]`). Doplň `method="post"` a `action="../practice/process.php"`. Odošli form: adresa po odoslaní nemá `?` a stránka hlási, že `process.php` nie je. To je v poriadku.
 
-**Úloha 6.4: process.php.** Prompt z Ukážky 7 so svojím form. Výsledok ulož ako `practice/process.php`. Vyplň form na sigma, odošli, prezri `print_r`. Odošli ho aj s nezaškrtnutým checkboxom a pozri, ktorý key chýba.
+**Úloha 6.4: process.php.** Prompt z Ukážky 6 so svojím form. Výsledok ulož ako `practice/process.php`. Vyplň form na sigma, odošli, prezri `print_r`. Odošli ho aj s nezaškrtnutým checkboxom a pozri, ktorý key chýba.
 
-**Úloha 6.5: Kontroly rukou.** Doplň `// DOPLŇ: kontrola` pre všetky zvyšné fields: dátum cez `strtotime` (a že je v budúcnosti, ak to pre tvoju tému dáva zmysel), select a radio cez `in_array` s `array_keys`, súhlas, dĺžka správy. Každú kontrolu vyskúšaj: pošli zlú hodnotu a pozri hlášku.
+**Úloha 6.5: Kontroly rukou.** Doplň `// DOPLŇ: kontrola` pre všetky zvyšné fields: dátum cez `strtotime` (a že nie je v budúcnosti, ak to pre tvoju tému dáva zmysel), select a radio cez `in_array` s `array_keys`, súhlas, dĺžka správy. Každú kontrolu vyskúšaj: pošli zlú hodnotu a pozri hlášku.
 
 **Úloha 6.6: Prehliadač nestačí.** F12, v `<input>` pre meno zmaž `required`, odošli prázdne. `process.php` chybu chytí. Ak nie, kontrola chýba.
 
 **Úloha 6.7: XSS.** Do mena napíš `<script>alert('ahoj')</script>`, odošli. Ak vyskočí okno, nájdi v `process.php` výpis bez `htmlspecialchars` a oprav ho. Prejdi všetky výpisy hodnôt od používateľa, aj `$value` v loop. Do `README.md` v repository dopíš dve vety: čo sa stalo pred opravou a po nej.
 
-**Úloha 6.8: Výpočty.** Prompt z Ukážky 8. Doplň `// DOPLŇ: vlastný výpočet` niečím zo svojej témy (dni od, roky do, počet znakov, percento…).
+**Úloha 6.8: Výpočty.** Prompt z Ukážky 7. Doplň `// DOPLŇ: vlastný výpočet` niečím zo svojej témy (dni od, roky do, počet znakov, percento…).
 
-**Úloha 6.9: Samospracujúci form.** Prompt z Ukážky 9. Výsledok ulož ako `web/content/register.php`. Doplň `// DOPLŇ`: skopíruj kontroly z `process.php` a doplň chýbajúce field. Na sigma: otvor Registráciu z menu (prázdny form), odošli s chybou (hodnoty zostali, červené fields), odošli správne (zhrnutie). `process.php` v repository nechaj, je to cvičný súbor ako `variables.php`.
+**Úloha 6.9: Samospracujúci form.** Prompt z Ukážky 8. Výsledok ulož ako `web/content/register.php`. Doplň `// DOPLŇ`: skopíruj kontroly z `process.php` a doplň chýbajúce field. Na sigma: otvor Registráciu z menu (prázdny form), odošli s chybou (hodnoty zostali, červené fields), odošli správne (zhrnutie). `process.php` v repository nechaj, je to cvičný súbor ako `variables.php`.
 
 **Úloha 6.10: Chyba naschvál.** V `web/content/register.php` prepíš v jednom `$_POST['email']` key na `$_POST['emial']`, odošli form, prečítaj, čo sa stalo (hláška, alebo tichá chyba vďaka `??`). Oprav. Potom zmaž `method="post"`, odošli, pozri adresu. Oprav.
 
@@ -161,7 +161,7 @@ In the repository *cv05* on GitHub and in your web space on sigma (`ti/cv05`):
 
 You fill in the `// DOPLŇ` and `[FILL IN …]` places yourself.
 
-### Example 7: a prompt for process.php
+### Example 6: a prompt for process.php
 
 ```text
 I have a form in the file content/register.php (I am sending it below) for a website
@@ -192,14 +192,14 @@ Here is the form:
 [PASTE content/register.php]
 ```
 
-### Example 8: a prompt for the calculations
+### Example 7: a prompt for the calculations
 
 ```text
 In the file process.php (I am sending it) I have, after the checks, an else branch
 where the data is fine. Add calculations from the form data into it, PHP 8.1, no functions:
 - from the date field [FILL IN the field's name]: the date in the format d. m. Y, the English
-  name of the day via date('l'), the number of days from today via strtotime and time()
-  divided by 86400 and ceil,
+  name of the day via date('l'), the number of days from that date until today via time() and strtotime
+  divided by 86400 and floor,
 - from the year field [FILL IN the field's name]: the number of years until today via (int) date('Y'),
 - the length of the text from the field [FILL IN the field's name] via mb_strlen,
 - leave one more calculation as the comment // DOPLŇ: my own calculation from my topic.
@@ -210,7 +210,7 @@ Here is the file:
 [PASTE process.php]
 ```
 
-### Example 9: a prompt for the self-processing form
+### Example 8: a prompt for the self-processing form
 
 ```text
 I am sending content/register.php (the form) and process.php (the checks) from a website
@@ -262,17 +262,17 @@ Right-click `cv05`, **Upload Folder**. Check on sigma `…/ti/cv05/web/` that th
 
 **Task 6.3: The form to POST.** In `web/content/register.php` check that all fields have English `name` and `value` without diacritics (the checkbox group has `[]`). Add `method="post"` and `action="../practice/process.php"`. Submit the form: the address after submitting has no `?` and the page reports that `process.php` does not exist. That is fine.
 
-**Task 6.4: process.php.** The prompt from Example 7 with your form. Save the result as `practice/process.php`. Fill in the form on sigma, submit, look at `print_r`. Submit it also with a checkbox unchecked and see which key is missing.
+**Task 6.4: process.php.** The prompt from Example 6 with your form. Save the result as `practice/process.php`. Fill in the form on sigma, submit, look at `print_r`. Submit it also with a checkbox unchecked and see which key is missing.
 
-**Task 6.5: Checks by hand.** Complete `// DOPLŇ: check` for all remaining fields: the date via `strtotime` (and that it is in the future, if that makes sense for your topic), select and radio via `in_array` with `array_keys`, consent, the length of the message. Try every check: send a bad value and look at the message.
+**Task 6.5: Checks by hand.** Complete `// DOPLŇ: check` for all remaining fields: the date via `strtotime` (and that it is not in the future, if that makes sense for your topic), select and radio via `in_array` with `array_keys`, consent, the length of the message. Try every check: send a bad value and look at the message.
 
 **Task 6.6: The browser is not enough.** F12, delete `required` in the `<input>` for the name, submit empty. `process.php` catches the error. If not, a check is missing.
 
 **Task 6.7: XSS.** Type `<script>alert('hi')</script>` into the name, submit. If a window pops up, find the output without `htmlspecialchars` in `process.php` and fix it. Go through all outputs of values from the user, also `$value` in the loop. Add two sentences to `README.md` in the repository: what happened before the fix and after it.
 
-**Task 6.8: Calculations.** The prompt from Example 8. Complete `// DOPLŇ: my own calculation` with something from your topic (days since, years until, number of characters, percentage…).
+**Task 6.8: Calculations.** The prompt from Example 7. Complete `// DOPLŇ: my own calculation` with something from your topic (days since, years until, number of characters, percentage…).
 
-**Task 6.9: The self-processing form.** The prompt from Example 9. Save the result as `web/content/register.php`. Complete `// DOPLŇ`: copy the checks from `process.php` and complete the missing field. On sigma: open Registration from the menu (an empty form), submit with an error (the values stayed, red fields), submit correctly (the summary). Leave `process.php` in the repository, it is a practice file like `variables.php`.
+**Task 6.9: The self-processing form.** The prompt from Example 8. Save the result as `web/content/register.php`. Complete `// DOPLŇ`: copy the checks from `process.php` and complete the missing field. On sigma: open Registration from the menu (an empty form), submit with an error (the values stayed, red fields), submit correctly (the summary). Leave `process.php` in the repository, it is a practice file like `variables.php`.
 
 **Task 6.10: An error on purpose.** In `web/content/register.php` change one `$_POST['email']` key to `$_POST['emial']`, submit the form, read what happened (a message, or a silent error thanks to `??`). Fix it. Then delete `method="post"`, submit, look at the address. Fix it.
 
