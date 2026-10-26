@@ -13,7 +13,7 @@ V repository *cv05* na GitHub a vo svojom webovom priestore na sigma (`ti/cv05`)
 
 ## Hodnotenie
 
-1 bod. Form je spracovaný cez POST, `practice/process.php` má kontroly a výpočty, `web/content/register.php` sa spracuje sám s ošetrenými výpismi. **Uzávierka 2** je koniec tohto týždňa; kolo 1 obhajob sa obhajuje z kópie `obhajoba1/cv05`. Commit a push najneskôr do nasledujúceho cvičenia. Po každom push sa spustia automatické testy; výsledok nájdeš podľa návodu [04 Odovzdávanie](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), časť 6.
+1 bod. Form je spracovaný cez POST, `practice/process.php` má kontroly a výpočty, `web/content/register.php` sa spracuje sám s ošetrenými výpismi. **Uzávierka 2** je koniec tohto týždňa. Commit a push najneskôr do nasledujúceho cvičenia. Po každom push sa spustia automatické testy; výsledok nájdeš podľa návodu [04 Odovzdávanie](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), časť 6.
 
 ## Prompty pre AI
 
@@ -136,7 +136,7 @@ Pravý klik na `cv05`, **Upload Folder**. Over na sigma `…/ti/cv05/web/`, že 
 
 **Hodnotenie:** 1 bod. V repository *cv05* na GitHub aj na sigma je form spracovaný cez POST, `process.php` s kontrolami a výpočtami, `content/register.php` ako samospracujúci form s ošetrenými výpismi. Commit a push najneskôr do nasledujúceho cvičenia.
 
-**Uzávierka 2** je koniec tohto týždňa: form spracúva PHP s validáciou vstupov a ošetrením výstupov, beží na sigma. Kolo 1 obhajob (statika a PHP) sa obhajuje z kópie `obhajoba1/cv05`, príkaz je nižšie.
+**Uzávierka 2** je koniec tohto týždňa: form spracúva PHP s validáciou vstupov a ošetrením výstupov, beží na sigma.
 
 ---
 
@@ -155,7 +155,7 @@ In the repository *cv05* on GitHub and in your web space on sigma (`ti/cv05`):
 
 ## Grading
 
-1 point. The form is processed via POST, `practice/process.php` has checks and calculations, `web/content/register.php` processes itself with treated outputs. **Deadline 2** is the end of this week; round 1 of the defences is defended from the copy `obhajoba1/cv05`. Commit and push by the next lab at the latest. Automatic tests run after every push; find the result following guide [04 Submitting](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), part 6.
+1 point. The form is processed via POST, `practice/process.php` has checks and calculations, `web/content/register.php` processes itself with treated outputs. **Deadline 2** is the end of this week. Commit and push by the next lab at the latest. Automatic tests run after every push; find the result following guide [04 Submitting](https://beata.stehlikova.website.tuke.sk/navody/04-odovzdavanie.html), part 6.
 
 ## AI prompts
 
@@ -282,4 +282,4 @@ Right-click `cv05`, **Upload Folder**. Check on sigma `…/ti/cv05/web/` that th
 
 **Grading:** 1 point. In the repository *cv05* on GitHub and on sigma the form is processed via POST, `process.php` has checks and calculations, `content/register.php` is a self-processing form with treated outputs. Commit and push by the next lab at the latest.
 
-**Deadline 2** is the end of this week: the form is processed by PHP with input validation and output treatment, it runs on sigma. Round 1 of the defences (static site and PHP) is defended from the copy `obhajoba1/cv05`, the command is below.
+**Deadline 2** is the end of this week: the form is processed by PHP with input validation and output treatment, it runs on sigma.
